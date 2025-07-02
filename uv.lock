@@ -98,6 +98,21 @@ wheels = [
 ]
 
 [[package]]
+name = "chtsh-mcp-server"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "aiohttp" },
+    { name = "mcp", extra = ["cli"] },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "aiohttp", specifier = ">=3.12.13" },
+    { name = "mcp", extras = ["cli"], specifier = ">=1.10.1" },
+]
+
+[[package]]
 name = "click"
 version = "8.2.1"
 source = { registry = "https://pypi.org/simple" }
@@ -280,21 +295,6 @@ wheels = [
 cli = [
     { name = "python-dotenv" },
     { name = "typer" },
-]
-
-[[package]]
-name = "mcp-test"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "aiohttp" },
-    { name = "mcp", extra = ["cli"] },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "aiohttp", specifier = ">=3.12.13" },
-    { name = "mcp", extras = ["cli"], specifier = ">=1.10.1" },
 ]
 
 [[package]]
